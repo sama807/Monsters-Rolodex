@@ -1,0 +1,25 @@
+monster1:{name:'Zuky'},
+      monster2:{name:'Linda'},
+      monster3:{name:'Frank'},
+//Instead of redefining the monsters again and again we will make an array 
+ that is
+ this.state = {
+      monsters: [
+      {name:'Zuky'},
+      {name:'Linda'},
+      {name:'Frank'}, ]
+      
+    };
+AND NOW WE USE MAP METHOD TO ITERATE
+<h1> {this.state.monster1.name} </h1>
+        <h1> {this.state.monster2.name} </h1>
+        <h1> {this.state.monster3.name} </h1> 
+THAT IS
+{this.state.monsters.map((monster) =>{
+          return (
+            <div key={monster.id}>
+              <h1 >{monster.name}</h1>
+            </div>
+          );
+
+COMPONENT LIFECYCLE: 	componentDidMount();
